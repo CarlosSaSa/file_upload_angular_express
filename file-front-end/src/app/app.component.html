@@ -1,0 +1,39 @@
+<div class="container">
+  <h3> Prueba de archivo </h3>
+  <hr class="red">
+</div>
+
+<div class="container">
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group row">
+      <label class="col-3 col-form-label">Nombre: </label>
+      <div class="col-9">
+        <input class="form-control" placeholder="Correo electrónico" formControlName="email" type="text">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-3 col-form-label">Ocupación: </label>
+      <div class="col-9">
+        <input class="form-control" placeholder="Contraseña" formControlName="password" type="text">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-3 col-form-label"> Lineamiento </label>
+      <label class="col-8 file_label" for="file_1">
+        <i class="fa-solid fa-upload mr-2"></i>
+        <span data-text="lineamiento"> Subir archivo </span>
+      </label>
+      <div class="inputfile">
+        <input id="file_1" type="file" accept=".zip" (change)="cargarArchivo($event, 'lineamiento', 'zip')">
+      </div>
+      <div class="col-6 offset-md-3">
+        <small class="form-text text-muted" data-text="lineamiento">  </small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-offset-3 col-sm-9">
+        <button class="btn btn-primary pull-right" type="submit" [disabled]="loginForm.invalid">Enviar</button>
+      </div>
+    </div>
+  </form>
+</div>

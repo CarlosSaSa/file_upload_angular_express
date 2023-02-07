@@ -1,0 +1,32 @@
+.inputfile {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.file_label {
+    background-color: #d3394c;
+    border-radius: 3px;
+    border: 2px solid #9D2449;
+    box-shadow: 0 0 0 0 #9D2449;
+    color: #9D2449;
+    background-color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 15px;
+    max-width: 200px;
+    overflow: hidden;
+    padding: 10px 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file_label:hover, .file_label:active {
+    color: #fff;
+    background-color: #9D2449;
+    border-color: #9D2449;
+}
+

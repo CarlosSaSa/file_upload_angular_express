@@ -1,0 +1,1 @@
+export const root_path = __dirname;
